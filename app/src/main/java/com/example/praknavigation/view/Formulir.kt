@@ -3,6 +3,7 @@ package com.example.praknavigation.view
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.padding
+import androidx.compose.material3.DividerDefaults.Thickness
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Scaffold
@@ -37,7 +38,25 @@ fun FormIsian(
                 singleLine = true,
                 modifier = Modifier
                     .padding(top = 20,pd)
+                    .width(250.dp),
+                label = {Text(text = "Nama Lengkap")},
+                OnValuesChange = {},
             )
+            HorizontalDivider(modifier = Modifier
+                .padding( all = 20.dp)
+                ,width(250.dp), thickness =Thickness,color = Color.Red)
+            Row{
+                jenisL.forEach {
+                    item->
+                    Row(verticalAlignment = Alignment.CenterVertically){
+                        RadioButton(
+                            selected = false,
+                            onClick = {item}
+                        )
+                        Text(text = item)
+                    }
+                }
+            }
         }
 
     }

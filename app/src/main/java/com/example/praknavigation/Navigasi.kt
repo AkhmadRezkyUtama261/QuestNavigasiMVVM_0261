@@ -7,6 +7,7 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.example.pertemuan6.view.FormIsian
 import com.example.pertemuan6.view.TampilData
+import com.example.praknavigation.view.TampilData
 
 enum class Navigasi {
     FormulirSaya,
